@@ -5,7 +5,7 @@ public class BinarySearch {
     public static void main(String[] args) {
 
         int[] array = {8, 31, 42, 52, 86, 87, 94, 95, 96, 99, 112, 156, 159, 222};
-        System.out.println(search(array, 221));
+        System.out.println(search(array, 222));
 
     }
 
@@ -14,7 +14,7 @@ public class BinarySearch {
         int arrayStart = 0;
         int arrayEnd = array.length - 1;
 
-        while (arrayStart != arrayEnd){
+        while (arrayStart <= arrayEnd){
 
             int middleOfArray = (arrayStart + arrayEnd) / 2;
             int middleValue = array[middleOfArray];
