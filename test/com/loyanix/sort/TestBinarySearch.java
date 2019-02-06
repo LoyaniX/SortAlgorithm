@@ -1,8 +1,8 @@
 package com.loyanix.sort;
 
-public class Main {
+public class TestBinarySearch {
 
     public static void main(String[] args) {
-	// write your code here
+
     }
 }
