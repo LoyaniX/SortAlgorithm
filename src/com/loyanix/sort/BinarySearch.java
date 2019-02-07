@@ -5,9 +5,10 @@ public class BinarySearch {
     public static void main(String[] args) {
 
         int[] array = {8, 31, 42, 52, 86, 87, 94, 95, 96, 99, 112, 156, 159, 222};
-        System.out.println(search(array, 222));
+        System.out.println(search(array, 31));
 
     }
+
 
     public static int search(int[] array, int findValue){
 
@@ -22,7 +23,7 @@ public class BinarySearch {
 
         while (arrayStart <= arrayEnd){
 
-            int middleOfArray = (arrayStart + arrayEnd) / 2;
+            int middleOfArray = arrayStart + (arrayEnd - arrayStart) / 2;
             int middleValue = array[middleOfArray];
 
             if (findValue > middleValue) {
