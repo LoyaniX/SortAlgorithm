@@ -51,4 +51,18 @@ public class TestBinarySearch {
 
         assert searchIndex == 404;
     }
+
+    @Test
+    public void testSortingOfEmptyArray(){
+
+        int searchIndex = BinarySearch.search(new int[0], 220);
+        assert searchIndex == 404;
+    }
+
+    @Test
+    public void testSortingOfNullArray(){
+
+        int searchIndex = BinarySearch.search(new int[0], 220);
+        assert searchIndex == 404;
+    }
 }

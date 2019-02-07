@@ -11,6 +11,12 @@ public class BinarySearch {
 
     public static int search(int[] array, int findValue){
 
+        if (array == null || array.length == 0){
+
+            System.out.println("Input array is null or empty");
+            return 404;
+        }
+
         int arrayStart = 0;
         int arrayEnd = array.length - 1;
 
