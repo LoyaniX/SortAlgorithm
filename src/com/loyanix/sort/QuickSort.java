@@ -21,11 +21,18 @@ public class QuickSort {
         System.out.println("Sorted array " + Arrays.toString(array));
     }
 
-    public static void sort(int[] values) {
+    public static String sort(int[] array) {
 
-        poinArray = values;
+        if (array == null || array.length == 0){
+
+            return "Input array is null";
+        }
+
+        poinArray = array;
 
         quicksort(0, poinArray.length - 1);
+
+        return "Succses";
     }
 
     private static void quicksort(int startArray, int endArray) {
