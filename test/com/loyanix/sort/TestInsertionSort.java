@@ -20,6 +20,17 @@ public class TestInsertionSort {
         Arrays.sort(arrayBase);
 
         assert Arrays.equals(array, arrayBase);
+    }
 
+    @Test
+    public void testSortingOfNullArray(){
+
+        assert InsertionSort.sort(null).equals("Input array is null");
+    }
+
+    @Test
+    public void testSortingOfEmptyArray(){
+
+        assert InsertionSort.sort(new int[0]).equals("Input array is null");
     }
 }
