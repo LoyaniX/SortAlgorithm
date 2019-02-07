@@ -4,45 +4,43 @@ import java.util.Arrays;
 
 public class QuickSort {
 
+    private static int[] poinArray;
+
     public static void main(String[] args) {
-
-        int[] array = new int[10];
-
+        int[]  array = new int[13];
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) ( Math.random() * 100 );
         }
 
         System.out.println("Default array " + Arrays.toString(array));
-        sort(array, 0, array.length);
+        sort(array);
         System.out.println("Sorted array " + Arrays.toString(array));
     }
 
-    public static void sort(int[] array, int startPossition,int endPossition){
+    public static void sort(int[] values) {
 
-        int i = startPossition;
-        int j = endPossition - 1;
-        int middle = array[(i + j) / 2];
+        poinArray = values;
+        quicksort(0, poinArray.length - 1);
+    }
 
-        while (i <= j){
+    private static void quicksort(int startArray, int endArray) {
+        int i = startArray;
+        int j = endArray;
+        int pivot = poinArray[startArray + (endArray - startArray) / 2];
 
-            while (array[i] < middle) {
-                i++;
-            }
-            while (array[j] > middle){
-                j--;
-            }
+        while (i <= j) {
 
-            if (i <= j){
-                int buffer = array[i];
-                array[i] = array[j];
-                array[j] = buffer;
+            while (poinArray[i] < pivot) i++;
+            while (poinArray[j] > pivot) j--;
+            if (i <= j) {
+                int temp = poinArray[i];
+                poinArray[i] = poinArray[j];
+                poinArray[j] = temp;
                 i++;
                 j--;
             }
         }
-
-        if(startPossition < j) sort(array, startPossition, j);
-        if(endPossition > i) sort(array, i, endPossition);
-
+        if (startArray < j) quicksort(startArray, j);
+        if (i < endArray) quicksort(i, endArray);
     }
 }
