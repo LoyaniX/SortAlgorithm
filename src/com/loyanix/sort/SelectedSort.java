@@ -15,8 +15,12 @@ public class SelectedSort {
         sort(array);
     }
 
-    public static void sort(int[] array){
+    public static String sort(int[] array){
 
+        if (array == null || array.length == 0){
+
+            return "Input array is null";
+        }
         System.out.println("Default array " + Arrays.toString(array));
 
         for (int i = 0; i < array.length; i++){
@@ -37,6 +41,6 @@ public class SelectedSort {
             array[index] = buffer;
         }
 
-        System.out.println("Sorted array " + Arrays.toString(array));
+        return "Sorted array " + Arrays.toString(array);
     }
 }

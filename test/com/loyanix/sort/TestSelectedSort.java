@@ -22,4 +22,16 @@ public class TestSelectedSort {
 
         assert Arrays.equals(array, arrayBase);
     }
+
+    @Test
+    public void testSortingOfNullArray(){
+
+        assert SelectedSort.sort(null).equals("Input array is null");
+    }
+
+    @Test
+    public void testSortingOfEmptyArray(){
+
+        assert SelectedSort.sort(new int[0]).equals("Input array is null");
+    }
 }
