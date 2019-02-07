@@ -9,7 +9,7 @@ public class TestQuickSort {
     @Test
     public void testSorting() {
 
-       /* int[] array = new int[10];
+        int[] array = new int[10];
         int[] arrayBase = new int[10];
 
         for (int i = 0; i < array.length; i++) {
@@ -17,9 +17,9 @@ public class TestQuickSort {
             arrayBase[i] = array[i];
         }
 
-        SelectedSort.sort(array);
+        QuickSort.sort(array);
         Arrays.sort(arrayBase);
 
-        assert Arrays.equals(array, arrayBase);*/
+        assert Arrays.equals(array, arrayBase);
     }
 }
