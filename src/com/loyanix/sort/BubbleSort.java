@@ -16,8 +16,12 @@ public class BubbleSort {
 
     }
 
-    public static void sort(int[] array){
+    public static String sort(int[] array){
 
+        if (array == null || array.length == 0){
+
+            return "Input array is null";
+        }
         System.out.println("Start array is:" + Arrays.toString(array));
 
         for (int i = 0; i < array.length; i++) {
@@ -30,6 +34,6 @@ public class BubbleSort {
             }
         }
 
-        System.out.println("Sorted array is:" + Arrays.toString(array));
+        return "Sorted array is:" + Arrays.toString(array);
     }
 }

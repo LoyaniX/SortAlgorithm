@@ -21,7 +21,18 @@ public class TestBubbleSort {
         Arrays.sort(arrayBase);
 
         assert Arrays.equals(array, arrayBase);
+    }
 
+    @Test
+    public void testSortingOfNullArray(){
+
+        assert BubbleSort.sort(null).equals("Input array is null");
+    }
+
+    @Test
+    public void testSortingOfEmptyArray(){
+
+        assert BubbleSort.sort(new int[0]).equals("Input array is null");
     }
 
 }
