@@ -1,4 +1,4 @@
 package com.loyanix.sort;
 
-public class TestSort {
+public class TestQuickSort {
 }
